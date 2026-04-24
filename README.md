@@ -1,29 +1,23 @@
 # nodejs-api
 
-A simple Node.js REST API packaged with Docker.
+A simple Node.js REST API built with Express.
+
+## Setup
+
+```bash
+npm install
+node index.js
+```
 
 ## Endpoints
 
-- `GET /health` — returns `{ "status": "OK" }`
+### GET /health
 
-## Docker Setup
+Returns server health status.
 
-### Build the image
-
-```bash
-docker build -t nodejs-api .
+**Response:**
+```json
+{ "status": "OK" }
 ```
 
-### Run the container
-
-```bash
-docker run -p 8080:8080 nodejs-api
-```
-
-Verify: `curl http://localhost:8080/health`
-
-### Run with docker compose
-
-```bash
-docker compose up -d
-```
+Server runs on **port 8080**.
